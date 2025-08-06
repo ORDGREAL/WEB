@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contacto</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: white;
+      padding: 40px;
+      text-align: center;
+    }
+
+    form {
+      background: #1f1f1f;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+
+    input, textarea {
+      width: 90%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: none;
+      background-color: #333;
+      color: white;
+    }
+
+    button {
+      background-color: #ff4f87;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #e63c70;
+    }
+
+    .success-message {
+      margin-top: 20px;
+      color: #4fff89;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>"Contact Form"</h1>
+  <form action="https://formspree.io/f/manblwer" method="POST">
+    <input type="text" name="nombre" placeholder="Your name" required />
+    <input type="email" name="email" placeholder="Your email" required />
+    <textarea name="mensaje" rows="5" placeholder="Write your message..." required></textarea>
+    <button type="submit">Send message</button>
+  </form>
+</body>
+</html>
