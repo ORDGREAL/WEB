@@ -59,25 +59,6 @@
       z-index: 1100;
     }
 
-    .music-controls {
-      margin-top: 30px;
-    }
-
-    .music-controls button {
-      background: #ff4f87;
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      margin: 5px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .music-title {
-      margin-top: 10px;
-      font-weight: bold;
-    }
-
     .progress-container {
       width: 80%;
       height: 10px;
@@ -92,42 +73,6 @@
       background-color: #ff4f87;
       width: 0%;
       border-radius: 5px;
-    }
-
-    .contact-card {
-      margin-top: 40px;
-      background-color: var(--card-bg);
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-      max-width: 500px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .contact-card h2 {
-      color: #ff4f87;
-      margin-bottom: 10px;
-    }
-
-    .contact-card p {
-      font-size: 1em;
-      color: var(--text-color);
-      margin-bottom: 20px;
-    }
-
-    .contact-btn {
-      background-color: #ff4f87;
-      color: #fff;
-      padding: 12px 20px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background-color 0.3s;
-    }
-
-    .contact-btn:hover {
-      background-color: #e63c70;
     }
 
     main {
@@ -169,22 +114,6 @@
       background-color: #292929;
     }
 
-    #toby {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-      transition: transform 0.3s;
-      z-index: 1000;
-    }
-
-    #toby:hover {
-      transform: scale(1.1);
-    }
-
     footer {
       background-color: var(--card-bg);
       padding: 20px;
@@ -193,41 +122,72 @@
       margin-top: 50px;
       border-top: 1px solid #333;
     }
+
+    .about {
+
+      margin-top:40px;
+
+      background:var(--card-bg);
+
+      padding:25px;
+
+      border-radius:12px;
+
+      max-width:600px;
+
+      margin-left:auto;
+
+      margin-right:auto;
+
+    }
+
+
+
+    .about h2 {
+
+      color:#ff4f87;
+
+    }
+
   </style>
 </head>
 <body>
   <button class="toggle-btn" onclick="toggleMode()">🌓 Change Mode</button>
-
-  <audio id="background-music">
-    <source src="audio/musica1.mp3" type="audio/mpeg">
-    Tu navegador no soporta audio.
-  </audio>
-
-  <div class="music-controls">
-    <button onclick="prevSong()">❤︎ Previous</button>
-    <button onclick="togglePlay()">▶️</button>
-    <button onclick="nextSong()">Next ❤︎</button>
-    <div class="music-title" id="music-title">Now Playing: Lo-Fi Beats</div>
-    <div class="progress-container" onclick="setProgress(event)">
-      <div class="progress-bar" id="progress-bar"></div>
-    </div>
-  </div>
 
   <header data-aos="fade-down">
     <h1>★ ORDG ★</h1>
     <p>Welcome to my own website :D</p>
   </header>
 
+  <section class="about" data-aos="fade-up">
+
+    
+<h2>About Me</h2>
+
+    
+<p>
+
+Hi, I'm ORDG.
+
+I make music and creative projects.
+
+This is my official website where you can find my links and updates.
+
+</p>
+
+
+  </section>
+
   <main>
     <section data-aos="zoom-in">
-      <img src="imagenes/foto.png" alt="Mira mi foto xd" />
+      <img src="imagenes/hair-toss.gif" alt="Mira mi foto xd" />
     </section>
 
     <section class="social" data-aos="fade-up">
       <a href="https://www.facebook.com/ORDGREAL" target="_blank">
         <img src="imagenes/facebook.png" alt="Facebook" />
       </a>
-      <a href="https://www.instagram.com/ordg.mp4" target="_blank">
+      <a href="https://www.instagram.com/ordg.osuka" target="_blank">
         <img src="imagenes/instagram.png" alt="Instagram" />
       </a>
       <a href="https://open.spotify.com/artist/0ykpUxYJZgHN7SBOf3HUVG" target="_blank">
@@ -240,20 +200,10 @@
         <img src="imagenes/ng_tank.png" alt="Newgrounds" />
       </a>
     </section>
-
-    <div class="contact-card" data-aos="flip-up">
-      <h2>Contact us!</h2>
-      <p>Do you have questions, ideas, or want to collaborate?</p>
-      <a class="contact-btn" href="contact.html">Click here to contact us</a>
-    </div>
   </main>
 
-  <a href="https://ordg.itch.io/undertale" target="_blank">
-    <img id="toby" src="imagenes/toby.png" alt="Toby Fox" />
-  </a>
-
   <footer>
-    &copy; 2025 ORDG - All rights reserved.
+    &copy; 2026 ORDG - All rights reserved.
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -263,59 +213,6 @@
     function toggleMode() {
       document.body.classList.toggle('light');
     }
-
-    const audio = document.getElementById('background-music');
-    const musicTitle = document.getElementById('music-title');
-    const progressBar = document.getElementById('progress-bar');
-    const songs = [
-      { src: 'audios/Emotion.mp3', title: 'Emotion - Pokemon BW' },
-      { src: 'audios/Your Reality Ft. Soffilaw.mp3', title: 'Your Reality - ORDG (Ft. Soffilaw)' },
-      { src: 'audios/SILENTCHAOS.mp3', title: 'SILENT CHAOS - SyxtenXIV' }
-    ];
-
-    let currentSong = 0;
-
-    function loadSong(index) {
-      audio.src = songs[index].src;
-      musicTitle.textContent = 'Reproduciendo: ' + songs[index].title;
-      audio.play();
-    }
-
-    function togglePlay() {
-      if (audio.paused) {
-        audio.play();
-      } else {
-        audio.pause();
-      }
-    }
-
-    function nextSong() {
-      currentSong = (currentSong + 1) % songs.length;
-      loadSong(currentSong);
-    }
-
-    function prevSong() {
-      currentSong = (currentSong - 1 + songs.length) % songs.length;
-      loadSong(currentSong);
-    }
-
-    function updateProgressBar() {
-      const percentage = (audio.currentTime / audio.duration) * 100;
-      progressBar.style.width = percentage + '%';
-    }
-
-    function setProgress(e) {
-      const width = e.currentTarget.clientWidth;
-      const clickX = e.offsetX;
-      const duration = audio.duration;
-      audio.currentTime = (clickX / width) * duration;
-    }
-
-    audio.addEventListener('timeupdate', updateProgressBar);
-
-    window.onload = () => {
-      loadSong(currentSong);
-    };
   </script>
 </body>
 </html>
